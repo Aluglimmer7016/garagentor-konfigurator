@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garagentor-Konfigurator (Responsive)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f7f7;
+      color: #192559;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+    h2 {
+      font-size: 26px;
+      color: #192559;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .step {
+      border: 1px solid #cbd1dc;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    label {
+      font-size: 16px;
+      display: block;
+      margin: 12px 0;
+      cursor: pointer;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      transform: scale(1.4);
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 2px solid #192559;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    button {
+      padding: 14px 30px;
+      font-size: 17px;
+      background-color: #F2A007;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .whatsapp {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .whatsapp a {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 14px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .stars {
+      font-size: 18px;
+      color: #f5b301;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .image-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .consent {
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    .sticky-cta {
+      position: sticky;
+      bottom: 0;
+      background: #F2A007;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 15px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p, label {
+        font-size: 15px;
+      }
+      input, textarea {
+        font-size: 14px;
+      }
+      button, .whatsapp a {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+      .sticky-cta {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="https://formsubmit.co/kontakt@garagentore-karlsruhe.de" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://garagentore-karlsruhe.de/danke">
+
+      <div class="step">
+        <h2>1. Wählen Sie Ihr Wunsch-Garagentor</h2>
+        <p>Welches Tor passt zu Ihrem Zuhause?</p>
+        <label><input type="radio" name="Torart" value="Sektionaltor" onclick="document.getElementById('sektionaltor-option').style.display='block';">Sektionaltor – modern und platzsparend</label>
+        <label><input type="radio" name="Torart" value="Rolltor" onclick="document.getElementById('sektionaltor-option').style.display='none';">Rolltor – kompakt und effizient</label>
+
+        <div id="sektionaltor-option" style="display:none; margin-top:15px;">
+          <p>Möchten Sie eine integrierte Tür?</p>
+          <label><input type="radio" name="Tür im Sektionaltor" value="Mit Tür"> Ja, mit Tür</label>
+          <label><input type="radio" name="Tür im Sektionaltor" value="Ohne Tür"> Nein, ohne Tür</label>
+        </div>
+
+        <div class="image-section">
+          <img src="https://cdn.openai.com/chatgpt/garage_tor_mix.png" alt="Sektionaltor und Rolltor Kombination">
+        </div>
+      </div>
+
+      <div class="step">
+        <h2>2. Ihre Wunschfarbe</h2>
+        <p>Wählen Sie frei aus über 50 Farben – alle zum gleichen Preis.</p>
+        <input type="text" name="Farbwunsch" placeholder="z. B. Anthrazitgrau RAL 7016">
+      </div>
+
+      <div class="step">
+        <h2>3. Maße Ihres Tores</h2>
+        <p>Damit alles perfekt passt – bitte Maße eintragen:</p>
+        <input type="number" name="Breite in cm" placeholder="Breite in cm">
+        <input type="number" name="Höhe in cm" placeholder="Höhe in cm">
+      </div>
+
+      <div class="step">
+        <h2>4. Wie möchten Sie Ihr Tor bedienen?</h2>
+        <label><input type="radio" name="Antrieb" value="Elektrisch">Elektrischer Antrieb – bequem per Knopfdruck</label>
+        <label><input type="radio" name="Antrieb" value="Handbetrieb">Handbetrieb – einfach & funktional</label>
+      </div>
+
+      <div class="step">
+        <h2>5. Ihre Kontaktdaten</h2>
+        <input type="text" name="Name" placeholder="Ihr Name" required>
+        <input type="email" name="E-Mail" placeholder="Ihre E-Mail-Adresse" required>
+        <input type="text" name="Telefonnummer" placeholder="Ihre Telefonnummer (optional)">
+        <textarea name="Nachricht" placeholder="Worauf sollen wir besonders achten?"></textarea>
+
+        <div class="consent">
+          <label><input type="checkbox" required> Ich stimme zu, dass meine Daten zur Angebotserstellung verarbeitet werden.</label>
+        </div>
+
+        <p><strong>Versprochen:</strong> Innerhalb von 24 Stunden erhalten Sie Ihr persönliches Angebot – auch am Sonntag. Keine Sorge, wir rufen nicht an, sondern melden uns diskret per E-Mail oder WhatsApp.</p>
+
+        <div class="stars">★★★★★ 4,9 / 5 aus über 120 Kundenbewertungen</div>
+
+        <div class="whatsapp">
+          <a href="https://wa.me/491732810201" target="_blank">Jetzt per WhatsApp anfragen</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:30px;">
+        <button type="submit">Anfrage jetzt absenden</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="sticky-cta">Jetzt konfigurieren & Angebot sichern</div>
+</body>
+</html>
